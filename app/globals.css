@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -------------------------------------------------- */
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background-color: #F3F4F6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* -------------------------------------------------- */
+/* Sidebar */
+.sidebar {
+  position: relative; /* scrolls with page */
+  width: 64px;
+  min-height: 100vh;
+  background-color: #0F6B5B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  box-sizing: border-box;
+}
+
+.sidebar-logo {
+  color: #FFFFFF;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar-utils {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 16px;
+}
+
+/* Sidebar buttons */
+.sidebar-btn {
+  all: unset; /* remove default browser button styles */
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  color: #E6F4F1;
+  background-color: transparent;
+  text-align: center;
+}
+
+.sidebar-btn:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.sidebar-btn.active {
+  background-color: #2FAE9E;
+  color: #FFFFFF;
+}
+
+/* -------------------------------------------------- */
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 64px; /* leave space for sidebar */
+  width: calc(100% - 64px);
+  height: 64px;
+  z-index: 90;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.navbar-container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* -------------------------------------------------- */
+/* Main content */
+.main-content {
+  margin-left: 64px; /* space for sidebar */
+  padding-top: 64px; /* space for header */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #F3F4F6;
+  overflow-y: auto; /* page scroll */
+}
+
+.content-wrapper {
+  padding: 24px;
+}
+
+.content-grid {
+  display: flex;
+  gap: 24px;
+}
+
+/* -------------------------------------------------- */
+/* Left column */
+.left-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-column > * + * {
+  margin-top: 16px;
+}
+
+/* -------------------------------------------------- */
+/* Right column */
+.right-column {
+  width: 380px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* -------------------------------------------------- */
+/* SuperCompany Card */
+.super-company {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 20px 24px 16px 24px;
+  width: 100%;
+}
+
+/* -------------------------------------------------- */
+/* Sales Table Card */
+.sales-table-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 0;
+  width: 100%;
+}
+
+/* -------------------------------------------------- */
+/* RTS */
+.rts-container {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  padding: 16px;
+  flex-grow: 1;
+}
+
+/* -------------------------------------------------- */
+/* Inner width safety */
+.super-company > *,
+.sales-table-card > * {
+  width: auto;
+}

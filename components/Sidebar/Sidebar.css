@@ -1,0 +1,115 @@
+/* Sidebar container */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: #0F6B5B;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px 8px;
+  transition: width 0.25s ease;
+  overflow: hidden;
+}
+
+/* States */
+.sidebar.collapsed {
+  width: 64px;
+}
+
+.sidebar.expanded {
+  width: 220px;
+}
+
+/* Logo */
+.sidebar-logo {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 8px;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Sections */
+.sidebar-nav,
+.sidebar-utils {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Item wrapper */
+.sidebar-item {
+  position: relative;
+}
+
+/* Button */
+.sidebar-btn {
+  width: 100%;
+  height: 40px;
+  border-radius: 12px;
+  border: none;
+  background: none;
+  color: #E6F4F1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+.sidebar-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.sidebar-btn.active {
+  background: #2FAE9E;
+  color: #ffffff;
+}
+
+/* Label text */
+.sidebar-label {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Tooltip (only when collapsed) */
+.sidebar-tooltip {
+  position: absolute;
+  left: 70px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #111827;
+  color: #ffffff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.sidebar-tooltip::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #111827 transparent transparent;
+}
+
+.sidebar-item:hover .sidebar-tooltip {
+  opacity: 1;
+  transform: translateY(-50%) translateX(4px);
+}

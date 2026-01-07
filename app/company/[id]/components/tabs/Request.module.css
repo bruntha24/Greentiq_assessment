@@ -1,0 +1,475 @@
+/* =========================
+   PAGE BACKGROUND
+========================= */
+:global(body) {
+  background: #f5f7f6;
+}
+
+/* =========================
+   CARD CONTAINER
+========================= */
+.card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+/* =========================
+   TABLE BASE
+========================= */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+/* =========================
+   TABLE HEADER
+========================= */
+.table thead th {
+  background: #ffffff;
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: left;
+  padding: 10px 4px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Sort icon (if any) */
+.table thead th svg {
+  color: #9ca3af;
+}
+
+/* =========================
+   TABLE BODY
+========================= */
+.table tbody td {
+  background: #ffffff;
+  color: #111827;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 12px 10px;
+  border-bottom: 1px solid #eef2f1;
+}
+
+/* Zebra rows (subtle) */
+.table tbody tr:nth-child(even) td {
+  background: #f8fbfa;
+}
+
+/* Hover row */
+.table tbody tr:hover td {
+  background: #eef7f6;
+}
+
+/* Selected row */
+.rowSelected td {
+  background: #eaf6f4 !important;
+}
+
+/* =========================
+   CHECKBOX COLUMN
+========================= */
+.checkboxCell input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #9ca3af;
+  border-radius: 4px;
+  cursor: pointer;
+  accent-color: #14b8a6;
+}
+
+/* =========================
+   STATUS BADGES (OPTIONAL)
+========================= */
+.statusBadge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.open {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.inprogress {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.closed {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+/* =========================
+   PRIORITY
+========================= */
+.priority {
+  font-weight: 500;
+}
+
+.high {
+  color: #dc2626;
+}
+
+.medium {
+  color: #d97706;
+}
+
+.low {
+  color: #059669;
+}
+/* =========================
+   TOOLBAR (CRM ACTION BAR)
+========================= */
+
+.toolbar {
+  height: 30px;
+  background: #ffffff;
+  border-top: 1px solid #eef2f1;
+  padding: 0 4px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* =========================
+   LEFT / RIGHT GROUPS
+========================= */
+
+.leftActions,
+.rightActions {
+  display: flex;
+  align-items: center;
+}
+
+.leftActions {
+  gap: 16px;
+}
+
+.rightActions {
+  gap: 12px;
+}
+
+/* =========================
+   TEXT BUTTONS (ADD / DELETE / FILTER)
+========================= */
+
+.textBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  background: transparent;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+
+  font-size: 14px;
+  font-weight: 500;
+  color: #f97316;
+
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+}
+
+.textBtn:hover:not(:disabled) {
+  background: #fff7ed;
+}
+
+.textBtn:disabled {
+  color: #d1d5db;
+  cursor: not-allowed;
+}
+
+/* Chevron icon inside Filter */
+.textBtn svg {
+  color: #f97316;
+}
+
+/* =========================
+   FILTER DROPDOWN
+========================= */
+
+.filterWrap {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 36px;
+  left: 0;
+
+  width: 160px;
+  padding: 6px 0;
+
+  background: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 8px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  z-index: 20;
+}
+
+.dropdown button {
+  width: 100%;
+  padding: 8px 14px;
+
+  background: transparent;
+  border: none;
+  text-align: left;
+
+  font-size: 14px;
+  color: #f97316;
+  cursor: pointer;
+
+  transition: background 150ms ease-in-out, color 150ms ease-in-out;
+}
+
+.dropdown button:hover {
+  background: #fff7ed;
+  color: #ea580c;
+}
+
+/* =========================
+   ICON BUTTONS (EDIT / REFRESH)
+========================= */
+
+.iconBtn {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+
+  color: #9ca3af;
+  cursor: pointer;
+
+  transition: all 150ms ease-in-out;
+}
+
+.iconBtn:hover:not(:disabled) {
+  background: #fff7ed;
+  color: #f97316;
+}
+
+.iconBtn:disabled {
+  color: #d1d5db;
+  cursor: not-allowed;
+}
+/* ===============================
+   MODAL OVERLAY
+================================ */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+/* MODAL BOX */
+.modal {
+  background: #ffffff;
+  width: 420px;
+  border-radius: 12px;
+  padding: 24px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.modal h3 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.modal p {
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 16px;
+}
+
+/* CLOSE */
+.closeBtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #9ca3af;
+}
+
+.closeBtn:hover {
+  color: #f97316;
+}
+
+/* FORM ELEMENTS */
+.modal input,
+.modal select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+
+.modal input:focus,
+.modal select:focus {
+  outline: none;
+  border-color: #f97316;
+}
+
+/* MODAL ACTIONS */
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.modalActions button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* PRIMARY */
+.modalActions button:first-child {
+  background: #f97316;
+  color: #ffffff;
+}
+
+.modalActions button:first-child:hover {
+  background: #ea580c;
+}
+
+/* SECONDARY */
+.modalActions button:last-child {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.modalActions button:last-child:hover {
+  background: #e2e8f0;
+}
+.filterWrap {
+  position: relative;
+  display: inline-block;
+}
+
+/* Hidden by default */
+.dropdown {
+  position: absolute;
+  top: 36px;
+  left: 0;
+  width: 160px;
+  background: #fff;
+  border: 1px solid #f1f5f9;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 6px 0;
+  z-index: 20;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(5px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Show on hover */
+.filterWrap {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown hidden by default */
+.dropdown {
+  position: absolute;
+  top: 36px;
+  left: 0;
+  width: 160px;
+  background: #fff;
+  border: 1px solid #f1f5f9;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 6px 0;
+  z-index: 20;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(5px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+/* =========================
+   FILTER WRAPPER
+========================= */
+.filterWrap {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown hidden by default */
+.dropdown {
+  position: absolute;
+  top: 36px;
+  left: 0;
+  width: 160px;
+  background: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 6px 0;
+  z-index: 20;
+
+  /* Hidden by default */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(5px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Show dropdown when parent has "active" class */
+.filterWrap.active .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Dropdown buttons */
+.dropdown button {
+  width: 100%;
+  padding: 8px 14px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-size: 14px;
+  color: #f97316;
+  cursor: pointer;
+  transition: background 150ms ease-in-out, color 150ms ease-in-out;
+}
+
+.dropdown button:hover {
+  background: #fff7ed;
+  color: #ea580c;
+}
+
+

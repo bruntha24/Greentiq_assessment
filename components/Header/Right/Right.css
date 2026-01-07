@@ -1,0 +1,110 @@
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e5e7eb; /* thin underline */
+}
+
+/* Shared wrapper */
+.dropdown-wrapper {
+  position: relative;
+}
+
+/* Icon button */
+.icon-btn {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #64748b; /* blue-gray like image */
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.dropdown-wrapper:hover .icon-btn {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+/* Badge */
+.badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 14px;
+  height: 14px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: #ef4444; /* image-like red */
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dropdown */
+.right-dropdown {
+  position: absolute;
+  top: 38px;
+  right: 0;
+  min-width: 200px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 6px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: all 0.15s ease;
+  z-index: 60;
+}
+
+.dropdown-wrapper:hover .right-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Dropdown title */
+.dropdown-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  padding: 6px 10px;
+}
+
+/* Dropdown buttons */
+.right-dropdown button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #0f172a;
+}
+
+.right-dropdown button:hover {
+  background: #f1f5f9;
+}
+
+/* Danger action */
+.right-dropdown .danger {
+  color: #dc2626;
+}
+
+.right-dropdown .danger:hover {
+  background: #fee2e2;
+}

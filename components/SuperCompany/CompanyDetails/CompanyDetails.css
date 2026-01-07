@@ -1,0 +1,73 @@
+.company-details {
+  background: white;
+  border-radius: 12px;
+  padding: 12px 16px;
+}
+
+/* Two-column grid */
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 48px; /* space between columns */
+  row-gap: 6px;     /* tighter vertical spacing */
+}
+
+/* Each row */
+.row {
+  display: flex;
+  align-items: center;
+  font-size: 13.5px;
+  line-height: 1.4;
+}
+
+/* Label */
+.row span:first-child {
+  width: 120px;           /* 🔑 controls label–value gap */
+  color: #6b7280;
+  font-weight: 400;
+  flex-shrink: 0;
+}
+
+/* Value */
+.row span:last-child,
+.row a {
+  color: #111827;
+  font-weight: 500;
+}
+
+/* Links */
+.row a {
+  text-decoration: none;
+}
+
+.row a:hover {
+  text-decoration: underline;
+  color: #2563eb;
+}
+.save-btn {
+  background-color:  #0F6B5B; /* Blue */
+  color: #ffffff;            /* White text */
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Hover effect */
+.save-btn:hover {
+  background-color:  #0F6B5B;
+}
+
+/* Active (click) effect */
+.save-btn:active {
+  transform: scale(0.98);
+}
+
+/* Disabled state (optional but recommended) */
+.save-btn:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}

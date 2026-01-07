@@ -1,0 +1,309 @@
+/* ===== Container ===== */
+.rts-container {
+  width: 360px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* ===== Header ===== */
+.rts-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* ===== Header Icons ===== */
+.rts-icon {
+  position: relative;
+  color: #6b7280;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.rts-icon:hover {
+  color: #10b981;
+}
+
+/* ===== Tooltip ===== */
+.rts-icon::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111827;
+  color: #ffffff;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.rts-icon:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(2px);
+}
+
+/* ===== Title & Subtitle ===== */
+.rts-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 6px;
+}
+
+.rts-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 18px;
+}
+
+/* ===== Details ===== */
+.rts-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #374151;
+}
+
+.detail-row span:first-child {
+  color: #6b7280;
+}
+
+.detail-row a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.detail-row a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Divider ===== */
+.rts-divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 18px 0;
+}
+
+/* ===== Section Titles ===== */
+.section-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+/* ===== Activities ===== */
+.activity-row {
+  display: flex;
+  gap: 12px;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.activity-row span {
+  color: #6b7280;
+  width: 75px;
+}
+
+.activity-row a {
+  color: #2563eb;
+  text-decoration: none;
+}
+.activity-row input {
+  font-size: 13px;
+  padding: 4px 6px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  flex-shrink: 1;       /* allow input to shrink */
+  min-width: 0;         /* crucial for flex items to not overflow */
+}
+
+.activity-date {
+  width: 90px;
+  flex-shrink: 0;       /* keep date fixed */
+}
+
+.activity-text {
+  flex: 1;              /* text input takes remaining space */
+  min-width: 0;         /* prevent overflow */
+}
+
+
+/* ===== Stakeholders ===== */
+.stakeholder {
+  font-size: 13px;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+/* ===== Inputs ===== */
+.rts-container input {
+  font-size: 13px;
+  padding: 4px 6px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+}
+
+.activity-date {
+  width: 90px;
+  margin-right: 8px;
+}
+
+.activity-text {
+  flex: 1;
+}
+
+.stakeholder-input {
+  width: 100%;
+  margin-bottom: 6px;
+}
+
+/* ===== Footer Controls ===== */
+.rts-footer-controls {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 18px;
+}
+
+/* ===== Edit + Save Group ===== */
+.rts-edit-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ===== Edit Button ===== */
+.rts-edit-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  border: none;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.rts-edit-btn:hover {
+  background: #e5e7eb;
+}
+
+.rts-edit-btn.active {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+/* ===== Save Button ===== */
+.rts-save-btn {
+  background-color: #14b8a6;
+  color: #ffffff;
+  border: none;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.rts-save-btn:hover {
+  background-color: #0d9488;
+}
+
+.rts-save-btn:active {
+  transform: scale(0.97);
+}
+
+/* ===== Arrow Navigation ===== */
+.rts-arrow-group {
+  display: flex;
+  gap: 12px;
+}
+
+.rts-arrow-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.rts-arrow-btn:hover {
+  background: #e5e7eb;
+}
+
+.rts-arrow-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+/* ===== MAIN TITLE ===== */
+.rts-main-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.rts-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.rts-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+/* ===== LABELS & VALUES ===== */
+.label {
+  color: #2563eb;
+  font-weight: 500;
+}
+
+.value {
+  color: #2563eb;
+  font-weight: 500;
+}
+
+/* ===== SECTION TITLES ===== */
+.section-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+/* ===== STATUS TEXT (OPTIONAL) ===== */
+.status-open {
+  color: #2563eb;
+  font-weight: 600;
+}

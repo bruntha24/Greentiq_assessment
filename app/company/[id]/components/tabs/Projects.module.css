@@ -1,0 +1,242 @@
+/* CARD */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 0 16px 16px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.06);
+}
+
+/* BOTTOM CONTROLS (Sales style) */
+.bottomControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #f97316;
+}
+
+.actionBtn:hover {
+  background: rgba(249, 115, 22, 0.12);
+}
+
+.disabled {
+  color: #d1d5db;
+  cursor: not-allowed;
+}
+
+/* STATUS */
+.statusPlanned {
+  background: #fef9c3;
+  color: #854d0e;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.statusProgress {
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.statusCompleted {
+  background: #dcfce7;
+  color: #166534;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+/* PRIORITY */
+.priorityHigh {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.priorityMedium {
+  background: #fef9c3;
+  color: #854d0e;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.priorityLow {
+  background: #dcfce7;
+  color: #166534;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContent {
+  background: #fff;
+  border-radius: 12px;
+  width: 420px;
+  padding: 24px;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modalBody {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.primaryBtn {
+  background: #f97316;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+.secondaryBtn {
+  background: transparent;
+  color: #f97316;
+  border: 1px solid #f97316;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+/* =========================
+   TABLE
+========================= */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Table Header */
+.table thead th {
+  background: #ffffff;
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 12px 10px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+/* Table Rows */
+.table tbody tr {
+  border-bottom: 1px solid #eef2f1;
+  transition: background-color 0.15s ease;
+}
+
+.table tbody tr:hover {
+  background: #eef7f6;
+}
+
+/* Selected Row */
+.rowSelected {
+  background: #e1f3f1 !important;
+}
+
+/* Table Cells */
+.table tbody td {
+  padding: 12px 10px;
+  font-size: 14px;
+  color: #111827;
+}
+/* ROW ACTION ICONS — SALES MATCH */
+.rowActions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #6b7280;
+}
+
+.rowActions svg {
+  cursor: pointer;
+}
+
+.rowActions svg:hover {
+  color: #f97316;
+}
+/* RIGHT SIDE ICONS */
+.rightIcons {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  color: #6b7280;
+}
+
+.rightIcons svg {
+  cursor: pointer;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.rightIcons svg:hover {
+  color: #f97316;
+  transform: scale(1.1);
+}
+
+/* FORM INPUTS */
+.input {
+  width: 100%;
+  padding: 9px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.input::placeholder {
+  color: #9ca3af;
+}
+
+.input:focus {
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.15);
+}
+
+/* MODAL TEXT */
+.modalContent p {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #374151;
+}

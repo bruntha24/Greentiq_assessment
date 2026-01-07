@@ -1,0 +1,59 @@
+.company-preferences {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background: white;
+  border-radius: 12px;
+}
+
+/* Left checkboxes */
+.prefs-left {
+  display: flex;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.prefs-left input {
+  accent-color: #10b981;
+  margin-right: 6px;
+}
+
+/* Right section: takes full remaining space */
+.prefs-right {
+  display: flex;
+  align-items: center;
+  margin-left: 120px; /* 🔹 Add gap between left checkboxes and right content */
+  gap: 360px;          /* space between updated text and arrows */
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* Arrow buttons container */
+.prefs-arrows {
+  display: flex;
+  gap: 6px; /* space between left/right arrow */
+}
+
+/* Arrow button style */
+.arrow-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background-color: #f3f4f6;
+  color: #111827;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.arrow-btn:hover {
+  background-color: #e5e7eb;
+}
+
+/* Updated text styling */
+.updated-text {
+  white-space: nowrap;
+}

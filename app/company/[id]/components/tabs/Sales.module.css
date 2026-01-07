@@ -1,0 +1,305 @@
+/* =========================
+   CARD
+========================= */
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 0 16px 16px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.06);
+}
+
+/* =========================
+   TABLE
+========================= */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead th {
+  background: #ffffff;
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 12px 10px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #eef2f1;
+  transition: background-color 0.15s ease;
+}
+
+.table tbody tr:hover {
+  background: #eef7f6;
+}
+
+.rowSelected {
+  background: #e1f3f1 !important;
+}
+
+.table tbody td {
+  padding: 12px 10px;
+  font-size: 14px;
+  color: #111827;
+}
+
+/* =========================
+   CHECKBOX
+========================= */
+.checkboxCell {
+  padding-left: 12px;
+}
+
+.checkboxCell input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #9ca3af;
+  border-radius: 4px;
+  cursor: pointer;
+  accent-color: #f97316;
+}
+
+/* =========================
+   CONTROLS
+========================= */
+.bottomControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actionButtons,
+.rightControls {
+  display: flex;
+  gap: 8px;
+}
+
+/* =========================
+   TOOLBAR ACTION BUTTONS
+========================= */
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #f97316;
+  transition: all 0.15s ease;
+}
+
+.actionBtn:hover {
+  background: rgba(249, 115, 22, 0.12);
+  color: #ea580c;
+}
+
+.disabled {
+  color: #d1d5db;
+  cursor: not-allowed;
+}
+
+.disabled:hover {
+  background: transparent;
+  color: #d1d5db;
+}
+
+/* =========================
+   DROPDOWN
+========================= */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background: transparent;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #f97316;
+  font-size: 14px;
+}
+
+.dropbtn:hover {
+  background: rgba(249, 115, 22, 0.12);
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: #ffffff;
+  min-width: 160px;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eef2f1;
+  z-index: 20;
+}
+
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+
+.dropdownContent button {
+  background: white;
+  color: #111827;
+  width: 100%;
+  text-align: left;
+  padding: 8px 12px;
+  border: none;
+  font-size: 14px;
+}
+
+.dropdownContent button:hover {
+  background: #f97316;
+  color: white;
+}
+
+/* =========================
+   MODAL
+========================= */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.modalContent {
+  position: relative;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 28px 20px 20px;
+  width: 420px;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+}
+
+.modalContent h3 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  color: #111827;
+}
+
+.modalContent input,
+.modalContent select {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+/* =========================
+   MODAL PRIMARY BUTTON
+========================= */
+.addButton,
+.deleteButton {
+  background: #f97316;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.addButton:hover,
+.deleteButton:hover {
+  background: #ea580c;
+}
+
+/* =========================
+   MODAL SECONDARY BUTTON
+========================= */
+.cancelButton {
+  background: transparent;
+  color: #f97316;
+  border: 1px solid #f97316;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.cancelButton:hover {
+  background: rgba(249, 115, 22, 0.12);
+  color: #ea580c;
+  border-color: #ea580c;
+}
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  padding: 4px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #9ca3af;
+}
+
+.closeButton:hover {
+  background: #f3f4f6;
+  color: #ef4444;
+}
+
+/* =========================
+   STATUS BADGES (SALES)
+========================= */
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* 🟢 OPEN */
+.statusOpen {
+  background: #dcfce7;
+  color: #166534;
+}
+
+/* 🔴 LOST */
+.statusLost {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* 🔵 SOLD */
+.statusSold {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+/* 🟡 STALLED */
+.statusStalled {
+  background: #fef9c3;
+  color: #92400e;
+}

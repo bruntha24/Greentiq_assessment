@@ -1,0 +1,139 @@
+/* ============================= */
+/* Card / Container */
+/* ============================= */
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px; /* spacious padding */
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* subtle shadow */
+}
+
+/* ============================= */
+/* Table */
+/* ============================= */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: inherit;
+  table-layout: fixed; /* distribute columns evenly */
+}
+
+/* ============================= */
+/* Table Header */
+/* ============================= */
+.table thead th {
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280; /* cool gray */
+  padding: 16px 20px; /* vertical + horizontal spacing */
+  border-bottom: 1.5px solid #d1d5db; /* slightly stronger than row divider */
+  white-space: nowrap;
+}
+
+/* ============================= */
+/* Table Rows */
+/* ============================= */
+.table tbody tr {
+  height: 64px; /* airy row height */
+  transition: background-color 0.15s ease;
+  border-bottom: 1px solid #e5e7eb; /* subtle row divider */
+}
+
+.table tbody tr:hover {
+  background-color: #f9fafb; /* light hover */
+}
+
+/* Selected row */
+.rowSelected {
+  background-color: #f3f4f6; /* subtle highlight */
+}
+
+/* ============================= */
+/* Table Cells */
+/* ============================= */
+.table td {
+  padding: 14px 20px; /* vertical + horizontal spacing */
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+  vertical-align: middle; /* text vertically centered */
+  border-bottom: 1px solid #e5e7eb; /* subtle divider */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Column Alignment */
+.nameColumn {
+  width: 30%;
+  text-align: left;
+}
+
+.emailColumn {
+  width: 30%;
+  text-align: left;
+  color: #374151; /* secondary text color */
+}
+
+.phoneColumn {
+  width: 20%;
+  text-align: left;
+  color: #374151;
+}
+
+.roleColumn {
+  width: 20%;
+  text-align: left;
+}
+
+/* Checkbox Cell */
+.checkboxCell {
+  width: 48px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* ============================= */
+/* Checkbox */
+.checkbox {
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 4px;
+  background-color: #ffffff;
+  appearance: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox:hover {
+  border-color: #2563eb;
+}
+
+.checkbox:checked {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
+
+.checkbox:checked::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 4px;
+  height: 8px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* ============================= */
+/* Action Bar */
+.actionBar {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-start;
+}

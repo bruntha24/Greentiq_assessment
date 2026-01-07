@@ -1,0 +1,23 @@
+/* SuperCompany container */
+.super-company {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  /* White card look */
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  /* Internal padding */
+  padding: 20px 24px 16px 24px;
+  box-sizing: border-box;
+
+  /* Fill the column space in the layout */
+  width: 100%;
+}
+
+/* Keep inner sections natural width */
+.super-company > * {
+  width: auto;
+}

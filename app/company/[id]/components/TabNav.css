@@ -1,0 +1,87 @@
+/* =========================
+   WRAPPER (ATTACHED TO TABLE)
+========================= */
+.table-tabs-wrapper {
+  background: #ffffff;
+  padding: 12px 16px 6px;
+  border-bottom: 1px solid #e5e7eb;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+/* =========================
+   TABS ROW
+========================= */
+.table-tabs {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* =========================
+   BASE TAB STYLE
+========================= */
+.table-tab {
+  all: unset;
+  cursor: pointer;
+
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+
+  padding: 6px 10px;
+  line-height: 1;
+  border-radius: 9999px;
+
+  /* 🔥 Ultra-smooth feel */
+  transition:
+    color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    padding 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+
+  will-change: transform, background-color;
+}
+
+/* =========================
+   HOVER (INACTIVE)
+========================= */
+.table-tab:hover {
+  color: #111827;
+}
+
+/* =========================
+   ACTIVE TAB (PILL)
+========================= */
+.table-tab.active {
+  background-color: rgba(70, 190, 170, 0.22);
+  color: #1f7f6b;
+  font-weight: 600;
+
+  padding: 6px 18px;
+  transform: scale(1.05);
+}
+
+/* =========================
+   SMOOTH UNDERLINE SLIDE
+========================= */
+.table-tab::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+
+  width: 0%;
+  height: 2px;
+  background-color: #1f7f6b;
+  border-radius: 999px;
+
+  transform: translateX(-50%);
+  transition: width 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Active underline expands smoothly */
+.table-tab.active::after {
+  width: 70%;
+}

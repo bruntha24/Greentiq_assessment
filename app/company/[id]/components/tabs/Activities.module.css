@@ -1,0 +1,227 @@
+/* =========================
+   CARD
+========================= */
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 0 16px 16px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.06);
+}
+
+/* =========================
+   TABLE (SALES MATCH)
+========================= */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+/* TABLE HEADER */
+.table thead th {
+  background: #ffffff;
+  color: #6b7280;            /* Sales muted grey */
+  font-size: 13px;
+  font-weight: 500;
+  padding: 14px 12px;        /* Proper Sales spacing */
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+  white-space: nowrap;
+}
+
+/* TABLE ROWS */
+.table tbody tr {
+  border-bottom: 1px solid #eef2f1;
+  transition: background-color 0.15s ease;
+}
+
+.table tbody tr:hover {
+  background: #eef7f6;       /* Sales hover */
+}
+
+/* SELECTED ROW */
+.rowSelected {
+  background: #e1f3f1 !important;
+}
+
+/* TABLE CELLS */
+.table tbody td {
+  padding: 14px 12px;        /* Match header spacing */
+  font-size: 14px;
+  color: #111827;
+  vertical-align: middle;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* =========================
+   STATUS BADGES
+========================= */
+.statusCompleted {
+  background: #dcfce7;
+  color: #166534;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.statusPending {
+  background: #fef9c3;
+  color: #92400e;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* =========================
+   ROW ACTION ICONS (✏️ ↻)
+========================= */
+.rowActions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-end;
+  color: #6b7280;
+}
+
+.rowActions svg {
+  cursor: pointer;
+}
+
+.rowActions svg:hover {
+  color: #f97316;
+}
+
+/* =========================
+   BOTTOM CONTROLS (SALES)
+========================= */
+.bottomControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #f97316;
+}
+
+.actionBtn:hover {
+  background: rgba(249, 115, 22, 0.12);
+}
+
+.disabled {
+  color: #d1d5db;
+  cursor: not-allowed;
+}
+
+/* =========================
+   MODAL (SALES)
+========================= */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.modalContent {
+  background: #ffffff;
+  border-radius: 12px;
+  width: 420px;
+  padding: 24px;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalHeader h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.modalBody {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.modalBody input,
+.modalBody select {
+  height: 42px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.primaryBtn {
+  background: #f97316;
+  color: #ffffff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+.secondaryBtn {
+  background: transparent;
+  color: #f97316;
+  border: 1px solid #f97316;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+
+/* LEFT BUTTONS */
+.actionButtons {
+  display: flex;
+  gap: 10px;
+}
+
+/* RIGHT ICONS */
+.rightActions {
+  display: flex;
+  gap: 14px;
+  color: #6b7280;
+}
+
+.rightActions svg {
+  cursor: pointer;
+}
+
+.rightActions svg:hover {
+  color: #f97316;
+}
